@@ -8,6 +8,7 @@
 
 #import "Photo+Flickr.h"
 #import "FlickrFetcher.h"
+#import "PhotoKind+Create.h"
 
 
 @implementation Photo (Flickr)
@@ -33,14 +34,17 @@
         photo.dateAccessed = [NSDate date];
         photo.unique = [photoDictionary [FLICKR_PHOTO_ID] description];
         
-        NSMutableArray *kinds = [[photoDictionary[FLICKR_TAGS] componentsSeparatedByString:@" "] mutableCopy];
-        for (NSString *tag in kinds) {
-            if ([@[@"cs193pspot", @"portrait", @"landscape"] containsObject:tag]) {
-                [kinds removeObject:tag];
+        // SETTING KIND
+        NSArray *photoTags = [[photoDictionary[FLICKR_TAGS] componentsSeparatedByString:@" "] mutableCopy];
+        NSMutableSet *allKinds = [[NSMutableSet alloc] init];
+        for (NSString *tag in photoTags) {
+            if (![[Photo invalidTags] containsObject:tag]) {
+                PhotoKind *kind = [PhotoKind photoKindWithName:tag withContext:context];
+                [allKinds addObject:kind];
             }
         }
-        NSSet *set = [NSSet setWithArray:kinds];
-        photo.kinds = set;
+        photo.kinds = allKinds;
+        // END SETTING KIND
         
     } else {
         photo = [matches lastObject];
@@ -50,7 +54,7 @@
 }
 
 
-- (NSArray *)invalideTags
++ (NSArray *)invalidTags
 {
     return @[@"cs193pspot", @"portrait", @"landscape"];
 }

@@ -28,6 +28,7 @@
 		F52241CD17CFF61900FF4062 /* PhotoKind+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241CC17CFF61900FF4062 /* PhotoKind+Create.m */; };
 		F52241D017CFFB4000FF4062 /* PhotoKind.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241CF17CFFB4000FF4062 /* PhotoKind.m */; };
 		F52241D317CFFB4000FF4062 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241D217CFFB4000FF4062 /* Photo.m */; };
+		F52241D617CFFFFC00FF4062 /* StanfordCategoriesCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241D517CFFFFC00FF4062 /* StanfordCategoriesCDTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		F52241CF17CFFB4000FF4062 /* PhotoKind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoKind.m; sourceTree = "<group>"; };
 		F52241D117CFFB4000FF4062 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		F52241D217CFFB4000FF4062 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		F52241D417CFFFFC00FF4062 /* StanfordCategoriesCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StanfordCategoriesCDTVC.h; sourceTree = "<group>"; };
+		F52241D517CFFFFC00FF4062 /* StanfordCategoriesCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StanfordCategoriesCDTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,14 +141,16 @@
 				F522418C17CFEB4C00FF4062 /* Core Data SPoT.xcdatamodeld */,
 				F52241D117CFFB4000FF4062 /* Photo.h */,
 				F52241D217CFFB4000FF4062 /* Photo.m */,
-				F52241CE17CFFB4000FF4062 /* PhotoKind.h */,
-				F52241CF17CFFB4000FF4062 /* PhotoKind.m */,
 				F52241C117CFF1B500FF4062 /* Photo+Flickr.h */,
 				F52241C217CFF1B500FF4062 /* Photo+Flickr.m */,
+				F52241CE17CFFB4000FF4062 /* PhotoKind.h */,
+				F52241CF17CFFB4000FF4062 /* PhotoKind.m */,
 				F52241CB17CFF61900FF4062 /* PhotoKind+Create.h */,
 				F52241CC17CFF61900FF4062 /* PhotoKind+Create.m */,
 				F522418917CFEAC200FF4062 /* CoreDataTableViewController.h */,
 				F522418A17CFEAC200FF4062 /* CoreDataTableViewController.m */,
+				F52241D417CFFFFC00FF4062 /* StanfordCategoriesCDTVC.h */,
+				F52241D517CFFFFC00FF4062 /* StanfordCategoriesCDTVC.m */,
 				F52241CA17CFF2A600FF4062 /* FlickrFetcher */,
 				F522416A17CFEA6000FF4062 /* Images.xcassets */,
 				F522415F17CFEA6000FF4062 /* Supporting Files */,
@@ -298,6 +303,7 @@
 				F522418E17CFEB4C00FF4062 /* Core Data SPoT.xcdatamodeld in Sources */,
 				F522416917CFEA6000FF4062 /* SPoTAppDelegate.m in Sources */,
 				F522416517CFEA6000FF4062 /* main.m in Sources */,
+				F52241D617CFFFFC00FF4062 /* StanfordCategoriesCDTVC.m in Sources */,
 				F52241D317CFFB4000FF4062 /* Photo.m in Sources */,
 				F522418B17CFEAC200FF4062 /* CoreDataTableViewController.m in Sources */,
 			);

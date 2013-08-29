@@ -27,6 +27,7 @@
         } else if (![matches count]) {
             kind = [NSEntityDescription insertNewObjectForEntityForName:@"PhotoKind" inManagedObjectContext:context];
             kind.name = name;
+            
         } else {
             kind = [matches lastObject];
         }
