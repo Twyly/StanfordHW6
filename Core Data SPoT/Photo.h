@@ -18,14 +18,14 @@
 @property (nonatomic, retain) NSString * unique;
 @property (nonatomic, retain) NSString * subtitle;
 @property (nonatomic, retain) NSString * imageURL;
-@property (nonatomic, retain) NSSet *type;
+@property (nonatomic, retain) NSSet *kinds;
 @end
 
 @interface Photo (CoreDataGeneratedAccessors)
 
-- (void)addTypeObject:(PhotoKind *)value;
-- (void)removeTypeObject:(PhotoKind *)value;
-- (void)addType:(NSSet *)values;
-- (void)removeType:(NSSet *)values;
+- (void)addKindsObject:(PhotoKind *)value;
+- (void)removeKindsObject:(PhotoKind *)value;
+- (void)addKinds:(NSSet *)values;
+- (void)removeKinds:(NSSet *)values;
 
 @end

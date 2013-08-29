@@ -17,6 +17,6 @@
 @dynamic unique;
 @dynamic subtitle;
 @dynamic imageURL;
-@dynamic type;
+@dynamic kinds;
 
 @end

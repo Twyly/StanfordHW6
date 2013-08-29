@@ -23,12 +23,11 @@
 		F522418B17CFEAC200FF4062 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F522418A17CFEAC200FF4062 /* CoreDataTableViewController.m */; };
 		F522418E17CFEB4C00FF4062 /* Core Data SPoT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F522418C17CFEB4C00FF4062 /* Core Data SPoT.xcdatamodeld */; };
 		F522419017CFEC5100FF4062 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F522418F17CFEC5100FF4062 /* CoreData.framework */; };
-		F52241BD17CFF14500FF4062 /* PhotoKind.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241BC17CFF14500FF4062 /* PhotoKind.m */; };
-		F52241C017CFF14600FF4062 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241BF17CFF14600FF4062 /* Photo.m */; };
 		F52241C317CFF1B500FF4062 /* Photo+Flickr.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241C217CFF1B500FF4062 /* Photo+Flickr.m */; };
-		F52241C817CFF2A000FF4062 /* imageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241C417CFF2A000FF4062 /* imageViewController.m */; };
 		F52241C917CFF2A000FF4062 /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241C717CFF2A000FF4062 /* FlickrFetcher.m */; };
 		F52241CD17CFF61900FF4062 /* PhotoKind+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241CC17CFF61900FF4062 /* PhotoKind+Create.m */; };
+		F52241D017CFFB4000FF4062 /* PhotoKind.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241CF17CFFB4000FF4062 /* PhotoKind.m */; };
+		F52241D317CFFB4000FF4062 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241D217CFFB4000FF4062 /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,18 +62,17 @@
 		F522418A17CFEAC200FF4062 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		F522418D17CFEB4C00FF4062 /* Core Data SPoT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Core Data SPoT.xcdatamodel"; sourceTree = "<group>"; };
 		F522418F17CFEC5100FF4062 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		F52241BB17CFF14500FF4062 /* PhotoKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoKind.h; sourceTree = "<group>"; };
-		F52241BC17CFF14500FF4062 /* PhotoKind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoKind.m; sourceTree = "<group>"; };
-		F52241BE17CFF14600FF4062 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
-		F52241BF17CFF14600FF4062 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		F52241C117CFF1B500FF4062 /* Photo+Flickr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+Flickr.h"; sourceTree = "<group>"; };
 		F52241C217CFF1B500FF4062 /* Photo+Flickr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+Flickr.m"; sourceTree = "<group>"; };
-		F52241C417CFF2A000FF4062 /* imageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageViewController.m; sourceTree = "<group>"; };
 		F52241C517CFF2A000FF4062 /* FlickrAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPIKey.h; sourceTree = "<group>"; };
 		F52241C617CFF2A000FF4062 /* FlickrFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrFetcher.h; sourceTree = "<group>"; };
 		F52241C717CFF2A000FF4062 /* FlickrFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrFetcher.m; sourceTree = "<group>"; };
 		F52241CB17CFF61900FF4062 /* PhotoKind+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PhotoKind+Create.h"; sourceTree = "<group>"; };
 		F52241CC17CFF61900FF4062 /* PhotoKind+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PhotoKind+Create.m"; sourceTree = "<group>"; };
+		F52241CE17CFFB4000FF4062 /* PhotoKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoKind.h; sourceTree = "<group>"; };
+		F52241CF17CFFB4000FF4062 /* PhotoKind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoKind.m; sourceTree = "<group>"; };
+		F52241D117CFFB4000FF4062 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		F52241D217CFFB4000FF4062 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,17 +136,16 @@
 			children = (
 				F522418717CFEA8800FF4062 /* iPhone.storyboard */,
 				F522418C17CFEB4C00FF4062 /* Core Data SPoT.xcdatamodeld */,
-				F52241BE17CFF14600FF4062 /* Photo.h */,
-				F52241BF17CFF14600FF4062 /* Photo.m */,
+				F52241D117CFFB4000FF4062 /* Photo.h */,
+				F52241D217CFFB4000FF4062 /* Photo.m */,
+				F52241CE17CFFB4000FF4062 /* PhotoKind.h */,
+				F52241CF17CFFB4000FF4062 /* PhotoKind.m */,
 				F52241C117CFF1B500FF4062 /* Photo+Flickr.h */,
 				F52241C217CFF1B500FF4062 /* Photo+Flickr.m */,
-				F52241BB17CFF14500FF4062 /* PhotoKind.h */,
-				F52241BC17CFF14500FF4062 /* PhotoKind.m */,
 				F52241CB17CFF61900FF4062 /* PhotoKind+Create.h */,
 				F52241CC17CFF61900FF4062 /* PhotoKind+Create.m */,
 				F522418917CFEAC200FF4062 /* CoreDataTableViewController.h */,
 				F522418A17CFEAC200FF4062 /* CoreDataTableViewController.m */,
-				F52241C417CFF2A000FF4062 /* imageViewController.m */,
 				F52241CA17CFF2A600FF4062 /* FlickrFetcher */,
 				F522416A17CFEA6000FF4062 /* Images.xcassets */,
 				F522415F17CFEA6000FF4062 /* Supporting Files */,
@@ -294,15 +291,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F52241C017CFF14600FF4062 /* Photo.m in Sources */,
 				F52241C917CFF2A000FF4062 /* FlickrFetcher.m in Sources */,
+				F52241D017CFFB4000FF4062 /* PhotoKind.m in Sources */,
 				F52241C317CFF1B500FF4062 /* Photo+Flickr.m in Sources */,
-				F52241C817CFF2A000FF4062 /* imageViewController.m in Sources */,
 				F52241CD17CFF61900FF4062 /* PhotoKind+Create.m in Sources */,
-				F52241BD17CFF14500FF4062 /* PhotoKind.m in Sources */,
 				F522418E17CFEB4C00FF4062 /* Core Data SPoT.xcdatamodeld in Sources */,
 				F522416917CFEA6000FF4062 /* SPoTAppDelegate.m in Sources */,
 				F522416517CFEA6000FF4062 /* main.m in Sources */,
+				F52241D317CFFB4000FF4062 /* Photo.m in Sources */,
 				F522418B17CFEAC200FF4062 /* CoreDataTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

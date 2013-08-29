@@ -32,12 +32,27 @@
         photo.imageURL = [[FlickrFetcher urlForPhoto:photoDictionary format:FlickrPhotoFormatLarge] absoluteString];
         photo.dateAccessed = [NSDate date];
         photo.unique = [photoDictionary [FLICKR_PHOTO_ID] description];
-        //photo.types
+        
+        NSMutableArray *kinds = [[photoDictionary[FLICKR_TAGS] componentsSeparatedByString:@" "] mutableCopy];
+        for (NSString *tag in kinds) {
+            if ([@[@"cs193pspot", @"portrait", @"landscape"] containsObject:tag]) {
+                [kinds removeObject:tag];
+            }
+        }
+        NSSet *set = [NSSet setWithArray:kinds];
+        photo.kinds = set;
+        
     } else {
         photo = [matches lastObject];
     }
     
     return photo;
+}
+
+
+- (NSArray *)invalideTags
+{
+    return @[@"cs193pspot", @"portrait", @"landscape"];
 }
 
 @end
