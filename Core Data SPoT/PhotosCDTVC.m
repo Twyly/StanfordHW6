@@ -8,6 +8,7 @@
 
 #import "PhotosCDTVC.h"
 #import "Photo.h"
+#import "DocumentAssistant.h"
 
 @interface PhotosCDTVC ()
 
@@ -22,7 +23,7 @@
     
     Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    cell.textLabel.text = photo.title;
+    cell.textLabel.text = [photo.title capitalizedString];
     cell.detailTextLabel.text = photo.subtitle;
     
     
@@ -48,6 +49,20 @@
     return cell;
 }
 
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
+//        photo.deleted = [NSNumber numberWithBool:YES];
+//    }
+//    [self.tableView reloadData];
+//}
+//
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return YES;
+//}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([sender isKindOfClass:[UITableViewCell class]]) {
@@ -55,6 +70,7 @@
         if (indexPath) {
             Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
             photo.dateAccessed = [NSDate date];
+            [[DocumentAssistant sharedInstance] saveDocument];
             NSURL *url = [NSURL URLWithString:photo.imageURL];
             if ([segue.identifier isEqualToString:@"setImageURL"]) {
                 [segue.destinationViewController performSelector:@selector(setImageURL:) withObject:url];

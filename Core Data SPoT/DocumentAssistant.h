@@ -15,6 +15,7 @@
 + (DocumentAssistant *)sharedInstance;
 
 - (void)openDocumentWithBlock:(void (^)(BOOL))block;
+- (void)saveDocument;
 
 
 @end

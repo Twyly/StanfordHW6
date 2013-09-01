@@ -32,7 +32,8 @@
         photo.subtitle = [[photoDictionary valueForKeyPath:FLICKR_PHOTO_DESCRIPTION] description];
         photo.imageURL = [[FlickrFetcher urlForPhoto:photoDictionary format:FlickrPhotoFormatLarge] absoluteString];
         photo.squareImageURL = [[FlickrFetcher urlForPhoto:photoDictionary format:FlickrPhotoFormatSquare] absoluteString];
-        photo.dateAccessed = [NSDate date];
+        photo.alphabeticalSection = [[photo.title substringToIndex:1] capitalizedString];
+        photo.deleted = [NSNumber numberWithBool:NO];
         photo.unique = [photoDictionary[FLICKR_PHOTO_ID] description];
         
         // SETTING KIND
@@ -44,6 +45,8 @@
                 [allKinds addObject:kind];
             }
         }
+        // Add the All tag
+        [allKinds addObject:[PhotoKind photoKindWithName:@"All" withContext:context]];
         photo.kinds = allKinds;
         // END SETTING KIND
         

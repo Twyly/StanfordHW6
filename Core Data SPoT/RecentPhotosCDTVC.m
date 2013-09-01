@@ -24,7 +24,7 @@
     if (managedObjectContext) {
         NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Photo"];
         fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"dateAccessed" ascending:NO]];
-        fetchRequest.predicate = nil;
+        fetchRequest.predicate = [NSPredicate predicateWithFormat:@"dateAccessed != nil"];
         fetchRequest.fetchLimit = NUMBER_OF_RECENT_PHOTOS;
         self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     } else {

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3394" systemVersion="12E3067" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Photo" representedClassName="Photo" syncable="YES">
+        <attribute name="alphabeticalSection" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateAccessed" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="deleted" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="squareImageData" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="squareImageURL" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,7 +17,7 @@
         <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="kinds" inverseEntity="Photo" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Photo" positionX="-11" positionY="2" width="128" height="148"/>
-        <element name="PhotoKind" positionX="223" positionY="9" width="128" height="73"/>
+        <element name="Photo" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PhotoKind" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

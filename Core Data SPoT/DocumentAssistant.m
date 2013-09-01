@@ -48,4 +48,10 @@
     
 }
 
+- (void)saveDocument
+{
+    DocumentAssistant *assistant = [DocumentAssistant sharedInstance];
+    [assistant.document saveToURL:assistant.document.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:nil];
+}
+
 @end

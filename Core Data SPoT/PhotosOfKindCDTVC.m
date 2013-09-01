@@ -28,7 +28,7 @@
         NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Photo"];
         fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]];
         fetchRequest.predicate = [NSPredicate predicateWithFormat:@"kinds contains %@", self.kind];
-        self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.kind.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+            self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.kind.managedObjectContext sectionNameKeyPath:@"alphabeticalSection" cacheName:nil];
     } else {
         self.fetchedResultsController = nil;
     }
@@ -55,5 +55,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end
