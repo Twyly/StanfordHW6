@@ -117,8 +117,19 @@
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="hAH-1s-a36">
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="hw5-re-1yK" id="mji-nM-1Hp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2VM-UU-MrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="hw5-re-1yK">
+                    <connections>
+                        <outlet property="delegate" destination="zth-ik-3Ie" id="Qhs-J0-Li1"/>
+                        <outlet property="searchContentsController" destination="zth-ik-3Ie" id="eki-3o-foO"/>
+                        <outlet property="searchResultsDataSource" destination="zth-ik-3Ie" id="bmd-oy-ij2"/>
+                        <outlet property="searchResultsDelegate" destination="zth-ik-3Ie" id="XSk-39-Eee"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1066" y="22"/>
         </scene>
@@ -202,22 +213,22 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="f23-sM-bVJ">
-                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <rect key="frame" x="150" y="218" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyO-qK-GXh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="569"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyO-qK-GXh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="xyO-qK-GXh" secondAttribute="bottom" constant="-113" id="BEu-pE-vm8"/>
-                            <constraint firstItem="xyO-qK-GXh" firstAttribute="top" secondItem="T2g-8T-jn3" secondAttribute="top" id="QkY-Kr-VlZ"/>
-                            <constraint firstItem="xyO-qK-GXh" firstAttribute="centerX" secondItem="f23-sM-bVJ" secondAttribute="centerX" id="c15-CV-lGV"/>
-                            <constraint firstItem="xyO-qK-GXh" firstAttribute="leading" secondItem="T2g-8T-jn3" secondAttribute="leading" id="gPA-Q6-eyj"/>
-                            <constraint firstItem="f23-sM-bVJ" firstAttribute="centerY" secondItem="xyO-qK-GXh" secondAttribute="centerY" id="vXS-aN-Fdi"/>
-                            <constraint firstItem="xyO-qK-GXh" firstAttribute="trailing" secondItem="T2g-8T-jn3" secondAttribute="trailing" id="yBB-qm-mHK"/>
+                            <constraint firstAttribute="bottom" secondItem="xyO-qK-GXh" secondAttribute="bottom" id="82w-Rf-HhO"/>
+                            <constraint firstItem="xyO-qK-GXh" firstAttribute="top" secondItem="T2g-8T-jn3" secondAttribute="top" id="KbW-dl-Iat"/>
+                            <constraint firstItem="xyO-qK-GXh" firstAttribute="leading" secondItem="T2g-8T-jn3" secondAttribute="leading" id="PUj-VE-ar3"/>
+                            <constraint firstAttribute="trailing" secondItem="xyO-qK-GXh" secondAttribute="trailing" id="UzG-8h-itG"/>
+                            <constraint firstAttribute="centerX" secondItem="f23-sM-bVJ" secondAttribute="centerX" id="mfy-zF-Y5a"/>
+                            <constraint firstAttribute="centerY" secondItem="f23-sM-bVJ" secondAttribute="centerY" id="tPp-h2-WUN"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>

@@ -82,7 +82,7 @@
                 NSData *imageData = [NSData dataWithContentsOfURL:self.imageURL];
                 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                 
-                //[[NSDataCache sharedInstance] cacheData:imageData withIdentifier:identifier];
+                [[NSDataCache sharedInstance] cacheData:imageData withIdentifier:identifier];
                 UIImage *image = [[UIImage alloc] initWithData:imageData];
                 if (self.imageURL == imageURL) {
                     dispatch_async(dispatch_get_main_queue(), ^{
