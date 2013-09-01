@@ -12,6 +12,7 @@
 		F50F442617D39D6D0028EDE7 /* DocumentAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = F50F442517D39D6D0028EDE7 /* DocumentAssistant.m */; };
 		F50F443B17D3CF040028EDE7 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F50F443A17D3CF040028EDE7 /* Photo.m */; };
 		F50F443E17D3CF050028EDE7 /* PhotoKind.m in Sources */ = {isa = PBXBuildFile; fileRef = F50F443D17D3CF050028EDE7 /* PhotoKind.m */; };
+		F50F444317D3EBDC0028EDE7 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50F444217D3EBDC0028EDE7 /* iPad.storyboard */; };
 		F522415917CFEA6000FF4062 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F522415817CFEA6000FF4062 /* Foundation.framework */; };
 		F522415B17CFEA6000FF4062 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F522415A17CFEA6000FF4062 /* CoreGraphics.framework */; };
 		F522415D17CFEA6000FF4062 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F522415C17CFEA6000FF4062 /* UIKit.framework */; };
@@ -58,6 +59,7 @@
 		F50F443A17D3CF040028EDE7 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		F50F443C17D3CF050028EDE7 /* PhotoKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoKind.h; sourceTree = "<group>"; };
 		F50F443D17D3CF050028EDE7 /* PhotoKind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoKind.m; sourceTree = "<group>"; };
+		F50F444217D3EBDC0028EDE7 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		F522415517CFEA6000FF4062 /* Core Data SPoT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core Data SPoT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F522415817CFEA6000FF4062 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F522415A17CFEA6000FF4062 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F522418717CFEA8800FF4062 /* iPhone.storyboard */,
+				F50F444217D3EBDC0028EDE7 /* iPad.storyboard */,
 				F50F443917D3CF040028EDE7 /* Photo.h */,
 				F50F443C17D3CF050028EDE7 /* PhotoKind.h */,
 				F50F443D17D3CF050028EDE7 /* PhotoKind.m */,
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F522416317CFEA6000FF4062 /* InfoPlist.strings in Resources */,
+				F50F444317D3EBDC0028EDE7 /* iPad.storyboard in Resources */,
 				F522416B17CFEA6000FF4062 /* Images.xcassets in Resources */,
 				F522418817CFEA8800FF4062 /* iPhone.storyboard in Resources */,
 			);
@@ -459,7 +463,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core Data SPoT/Core Data SPoT-Prefix.pch";
 				INFOPLIST_FILE = "Core Data SPoT/Core Data SPoT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -472,7 +478,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core Data SPoT/Core Data SPoT-Prefix.pch";
 				INFOPLIST_FILE = "Core Data SPoT/Core Data SPoT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -93,6 +93,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Stanford Photos";
 	[self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
 }
 
@@ -109,6 +110,12 @@
     if (!self.managedObjectContext) [self useDocument];
 }
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.splitViewController.delegate = self;
+}
+
 - (void)useDocument
 {
     DocumentAssistant *assistant = [DocumentAssistant sharedInstance];
@@ -123,6 +130,13 @@
         });
         
     }];
+}
+
+# pragma mark - UISplitViewControllerDelegate
+
+- (BOOL)splitViewController:(UISplitViewController *)svc shouldHideViewController:(UIViewController *)vc inOrientation:(UIInterfaceOrientation)orientation
+{
+    return NO;
 }
 
 @end

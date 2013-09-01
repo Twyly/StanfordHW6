@@ -18,7 +18,7 @@
 - (void)setKind:(PhotoKind *)kind
 {
     _kind = kind;
-    self.title = kind.name;
+    self.title = [kind.name capitalizedString];
     [self setupFetchedResultsController];
 }
 
