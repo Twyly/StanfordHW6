@@ -15,6 +15,7 @@
 @property (strong, nonatomic) UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *titleBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (nonatomic) BOOL startedZooming;
 
 @end
 
@@ -111,11 +112,18 @@
 
 - (void)setAppropiateZoomScale
 {
-    CGSize photoSize = self.imageView.bounds.size;
-    float ratioX = photoSize.width / self.scrollView.bounds.size.width;
-    float ratioY = photoSize.height / self.scrollView.bounds.size.height;
-    float scaleFactor = 1.0 / MAX(ratioX, ratioY);
-    [self.scrollView setZoomScale:scaleFactor animated:NO];
+    if (!self.startedZooming) {
+        CGSize photoSize = self.imageView.bounds.size;
+        float ratioX = photoSize.width / self.scrollView.bounds.size.width;
+        float ratioY = photoSize.height / self.scrollView.bounds.size.height;
+        float scaleFactor = 1.0 / MAX(ratioX, ratioY);
+        [self.scrollView setZoomScale:scaleFactor animated:NO];
+    }
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale
+{
+    self.startedZooming = YES;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -143,6 +151,7 @@
     self.scrollView.minimumZoomScale = 0.2;
     self.scrollView.maximumZoomScale = 5.0;
     self.titleBarButtonItem.title = self.title;
+    self.startedZooming = NO;
 	
 }
 
