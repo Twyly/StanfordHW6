@@ -31,11 +31,12 @@
         photo.title = [photoDictionary[FLICKR_PHOTO_TITLE] description];
         photo.subtitle = [[photoDictionary valueForKeyPath:FLICKR_PHOTO_DESCRIPTION] description];
         photo.imageURL = [[FlickrFetcher urlForPhoto:photoDictionary format:FlickrPhotoFormatLarge] absoluteString];
+        photo.squareImageURL = [[FlickrFetcher urlForPhoto:photoDictionary format:FlickrPhotoFormatSquare] absoluteString];
         photo.dateAccessed = [NSDate date];
-        photo.unique = [photoDictionary [FLICKR_PHOTO_ID] description];
+        photo.unique = [photoDictionary[FLICKR_PHOTO_ID] description];
         
         // SETTING KIND
-        NSArray *photoTags = [[photoDictionary[FLICKR_TAGS] componentsSeparatedByString:@" "] mutableCopy];
+        NSArray *photoTags = [photoDictionary[FLICKR_TAGS] componentsSeparatedByString:@" "];
         NSMutableSet *allKinds = [[NSMutableSet alloc] init];
         for (NSString *tag in photoTags) {
             if (![[Photo invalidTags] containsObject:tag]) {
