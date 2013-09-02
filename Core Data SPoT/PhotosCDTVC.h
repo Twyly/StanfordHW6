@@ -8,6 +8,6 @@
 
 #import "CoreDataTableViewController.h"
 
-@interface PhotosCDTVC : CoreDataTableViewController
+@interface PhotosCDTVC : CoreDataTableViewController <UISplitViewControllerDelegate>
 
 @end

@@ -45,7 +45,7 @@
 - (void)setSplitViewBarButtonItem:(UIBarButtonItem *)splitViewBarButtonItem
 {
     NSMutableArray *toolbarItems = [self.toolbar.items mutableCopy];
-    if (_splitViewBarButtonItem) {
+    if (splitViewBarButtonItem) {
         if ([toolbarItems containsObject:splitViewBarButtonItem]) {
             [toolbarItems removeObject:splitViewBarButtonItem];
             _splitViewBarButtonItem = nil;
@@ -168,6 +168,7 @@
     self.scrollView.maximumZoomScale = 5.0;
     self.titleBarButtonItem.title = self.title;
     self.startedZooming = NO;
+    self.splitViewBarButtonItem = self.splitViewBarButtonItem;
 	
 }
 

@@ -110,12 +110,6 @@
     if (!self.managedObjectContext) [self useDocument];
 }
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    self.splitViewController.delegate = self;
-}
-
 - (void)useDocument
 {
     DocumentAssistant *assistant = [DocumentAssistant sharedInstance];
@@ -130,14 +124,6 @@
         });
         
     }];
-}
-
-# pragma mark - UISplitViewControllerDelegate
-
-- (BOOL)splitViewController:(UISplitViewController *)svc shouldHideViewController:(UIViewController *)vc inOrientation:(UIInterfaceOrientation)orientation
-{
-    return NO;
-    return UIInterfaceOrientationIsPortrait(orientation);
 }
 
 

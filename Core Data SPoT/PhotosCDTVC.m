@@ -9,6 +9,7 @@
 #import "PhotosCDTVC.h"
 #import "Photo.h"
 #import "DocumentAssistant.h"
+#import "ImageViewController.h"
 
 @interface PhotosCDTVC ()
 
@@ -72,6 +73,9 @@
             [[DocumentAssistant sharedInstance] saveDocument];
             NSURL *url = [NSURL URLWithString:photo.imageURL];
             if ([segue.identifier isEqualToString:@"setImageURL"]) {
+                if ([self splitViewDetailWithBarButtonItem]) {
+                    [self transferSplitViewBarButtonItemToViewController:segue.destinationViewController];
+                }
                 [segue.destinationViewController performSelector:@selector(setImageURL:) withObject:url];
                 
             }
@@ -103,6 +107,48 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    self.splitViewController.delegate = self;
+}
+
+
+
+# pragma mark - UISplitViewControllerDelegate
+
+- (BOOL)splitViewController:(UISplitViewController *)svc shouldHideViewController:(UIViewController *)vc inOrientation:(UIInterfaceOrientation)orientation
+{
+    return UIInterfaceOrientationIsPortrait(orientation);
+}
+
+- (void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc
+{
+    barButtonItem.title = @"Photos";
+    id detailViewController = [self.splitViewController.viewControllers lastObject];
+    if ([detailViewController respondsToSelector:@selector(setSplitViewBarButtonItem:)])
+        [detailViewController performSelector:@selector(setSplitViewBarButtonItem:) withObject:barButtonItem];
+}
+
+- (void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
+    id detailViewController = [self.splitViewController.viewControllers lastObject];
+    if ([detailViewController respondsToSelector:@selector(setSplitViewBarButtonItem:)])
+        [detailViewController performSelector:@selector(setSplitViewBarButtonItem:) withObject:barButtonItem];
+}
+
+- (id)splitViewDetailWithBarButtonItem
+{
+    id detail = [self.splitViewController.viewControllers lastObject];
+    if (![detail respondsToSelector:@selector(setSplitViewBarButtonItem:)] ||
+        ![detail respondsToSelector:@selector(splitViewBarButtonItem)]) detail = nil;
+    return detail;
+}
+
+- (void)transferSplitViewBarButtonItemToViewController:(id)destinationViewController
+{
+    UIBarButtonItem *splitViewBarButtonItem = [[self splitViewDetailWithBarButtonItem] splitViewBarButtonItem];
+    [[self splitViewDetailWithBarButtonItem] setSplitViewBarButtonItem:nil];
+    if (splitViewBarButtonItem) {
+        [destinationViewController setSplitViewBarButtonItem:splitViewBarButtonItem];
+    }
 }
 
 @end

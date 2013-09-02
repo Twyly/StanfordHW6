@@ -8,7 +8,7 @@
 
 #import "CoreDataTableViewController.h"
 
-@interface StanfordCategoriesCDTVC : CoreDataTableViewController <UISplitViewControllerDelegate>
+@interface StanfordCategoriesCDTVC : CoreDataTableViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
