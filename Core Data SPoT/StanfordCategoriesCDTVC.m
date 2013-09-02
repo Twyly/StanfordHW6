@@ -40,7 +40,11 @@
     
     PhotoKind *kind = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    cell.textLabel.text = [kind.name capitalizedString];
+    if ([kind.name isEqualToString:ALL_PHOTO_KIND_NAME]) {
+        cell.textLabel.text = @"All Photos";
+    } else {
+        cell.textLabel.text = [kind.name capitalizedString];
+    }
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%d photos", [kind.photos count]];
     
     return cell;

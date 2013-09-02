@@ -8,6 +8,8 @@
 
 #import "Photo.h"
 
+#define ALL_PHOTO_KIND_NAME @"^^ALL^^"
+
 @interface Photo (Flickr)
 
 + (Photo *)photoWithFlickrInfo:(NSDictionary *)dictionary withContext:(NSManagedObjectContext *)context;

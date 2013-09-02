@@ -52,7 +52,7 @@
         
         
         // Add the All tag
-        [allKinds addObject:[PhotoKind photoKindWithName:@"All" withContext:context]];
+        [allKinds addObject:[PhotoKind photoKindWithName:ALL_PHOTO_KIND_NAME withContext:context]];
         photo.kinds = allKinds;
         // END SETTING KIND
         

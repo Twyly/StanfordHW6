@@ -7,7 +7,7 @@
 //
 
 #import "PhotosOfKindCDTVC.h"
-#import "Photo.h"
+#import "Photo+Flickr.h"
 
 @interface PhotosOfKindCDTVC ()
 
@@ -26,7 +26,7 @@
 {
     if (self.kind.managedObjectContext) {
         
-        if ([self.kind.name isEqualToString:@"All"]) {
+        if ([self.kind.name isEqualToString:ALL_PHOTO_KIND_NAME]) {
             NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Photo"];
             fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"kindsAsString" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]];
             fetchRequest.predicate = nil;
