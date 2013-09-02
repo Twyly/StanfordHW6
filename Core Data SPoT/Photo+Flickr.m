@@ -38,13 +38,19 @@
         
         // SETTING KIND
         NSArray *photoTags = [photoDictionary[FLICKR_TAGS] componentsSeparatedByString:@" "];
+        NSMutableArray *allKindsNames = [[NSMutableArray alloc] init];
         NSMutableSet *allKinds = [[NSMutableSet alloc] init];
         for (NSString *tag in photoTags) {
             if (![[Photo invalidTags] containsObject:tag]) {
                 PhotoKind *kind = [PhotoKind photoKindWithName:tag withContext:context];
                 [allKinds addObject:kind];
+                [allKindsNames addObject:[kind.name capitalizedString]];
             }
         }
+        
+        photo.kindsAsString = [allKindsNames componentsJoinedByString:@"/"];
+        
+        
         // Add the All tag
         [allKinds addObject:[PhotoKind photoKindWithName:@"All" withContext:context]];
         photo.kinds = allKinds;
@@ -58,9 +64,11 @@
 }
 
 
+
 + (NSArray *)invalidTags
 {
     return @[@"cs193pspot", @"portrait", @"landscape"];
 }
+
 
 @end

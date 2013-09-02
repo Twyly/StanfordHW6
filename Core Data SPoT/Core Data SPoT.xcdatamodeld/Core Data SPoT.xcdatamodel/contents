@@ -5,6 +5,7 @@
         <attribute name="dateAccessed" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="deleted" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kindsAsString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="squareImageData" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="squareImageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>

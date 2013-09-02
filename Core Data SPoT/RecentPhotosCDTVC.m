@@ -69,4 +69,5 @@
     if (!self.managedObjectContext) [self useDocument];
 }
 
+
 @end

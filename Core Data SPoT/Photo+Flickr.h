@@ -12,4 +12,5 @@
 
 + (Photo *)photoWithFlickrInfo:(NSDictionary *)dictionary withContext:(NSManagedObjectContext *)context;
 
+
 @end

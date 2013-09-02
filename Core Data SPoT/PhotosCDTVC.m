@@ -83,6 +83,8 @@
     }
 }
 
+#pragma mark - life cycle methods
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -96,25 +98,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSLog(@"View loaded");
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
     self.splitViewController.delegate = self;
-    NSLog(@"AWAKE FROM NIB");
 }
 
 
-
 # pragma mark - UISplitViewControllerDelegate
+
+// The delegate must be set in awakefromnib as this view is first loaded in a UITabbarcontroller, and viewdidload has not been called
 
 - (BOOL)splitViewController:(UISplitViewController *)svc shouldHideViewController:(UIViewController *)vc inOrientation:(UIInterfaceOrientation)orientation
 {

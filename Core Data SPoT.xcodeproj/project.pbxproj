@@ -10,8 +10,6 @@
 		F50F442017D391810028EDE7 /* PhotosCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F50F441F17D391810028EDE7 /* PhotosCDTVC.m */; };
 		F50F442317D3921D0028EDE7 /* RecentPhotosCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F50F442217D3921D0028EDE7 /* RecentPhotosCDTVC.m */; };
 		F50F442617D39D6D0028EDE7 /* DocumentAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = F50F442517D39D6D0028EDE7 /* DocumentAssistant.m */; };
-		F50F443B17D3CF040028EDE7 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F50F443A17D3CF040028EDE7 /* Photo.m */; };
-		F50F443E17D3CF050028EDE7 /* PhotoKind.m in Sources */ = {isa = PBXBuildFile; fileRef = F50F443D17D3CF050028EDE7 /* PhotoKind.m */; };
 		F50F444317D3EBDC0028EDE7 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50F444217D3EBDC0028EDE7 /* iPad.storyboard */; };
 		F522415917CFEA6000FF4062 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F522415817CFEA6000FF4062 /* Foundation.framework */; };
 		F522415B17CFEA6000FF4062 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F522415A17CFEA6000FF4062 /* CoreGraphics.framework */; };
@@ -36,6 +34,8 @@
 		F527352617D125ED00370A2D /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F527352517D125ED00370A2D /* ImageViewController.m */; };
 		F527352917D1260000370A2D /* NSDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F527352817D1260000370A2D /* NSDataCache.m */; };
 		F542881217D029E000959A7E /* PhotosOfKindCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F542881117D029E000959A7E /* PhotosOfKindCDTVC.m */; };
+		F54F96DC17D525AE004DA1B4 /* PhotoKind.m in Sources */ = {isa = PBXBuildFile; fileRef = F54F96DB17D525AE004DA1B4 /* PhotoKind.m */; };
+		F54F96DF17D525AF004DA1B4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F54F96DE17D525AF004DA1B4 /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +55,6 @@
 		F50F442217D3921D0028EDE7 /* RecentPhotosCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentPhotosCDTVC.m; sourceTree = "<group>"; };
 		F50F442417D39D6D0028EDE7 /* DocumentAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentAssistant.h; sourceTree = "<group>"; };
 		F50F442517D39D6D0028EDE7 /* DocumentAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentAssistant.m; sourceTree = "<group>"; };
-		F50F443917D3CF040028EDE7 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
-		F50F443A17D3CF040028EDE7 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
-		F50F443C17D3CF050028EDE7 /* PhotoKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoKind.h; sourceTree = "<group>"; };
-		F50F443D17D3CF050028EDE7 /* PhotoKind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoKind.m; sourceTree = "<group>"; };
 		F50F444217D3EBDC0028EDE7 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		F522415517CFEA6000FF4062 /* Core Data SPoT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core Data SPoT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F522415817CFEA6000FF4062 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,6 +92,10 @@
 		F527352817D1260000370A2D /* NSDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataCache.m; sourceTree = "<group>"; };
 		F542881017D029E000959A7E /* PhotosOfKindCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosOfKindCDTVC.h; sourceTree = "<group>"; };
 		F542881117D029E000959A7E /* PhotosOfKindCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosOfKindCDTVC.m; sourceTree = "<group>"; };
+		F54F96DA17D525AE004DA1B4 /* PhotoKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoKind.h; sourceTree = "<group>"; };
+		F54F96DB17D525AE004DA1B4 /* PhotoKind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoKind.m; sourceTree = "<group>"; };
+		F54F96DD17D525AF004DA1B4 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		F54F96DE17D525AF004DA1B4 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,11 +159,11 @@
 			children = (
 				F522418717CFEA8800FF4062 /* iPhone.storyboard */,
 				F50F444217D3EBDC0028EDE7 /* iPad.storyboard */,
-				F50F443917D3CF040028EDE7 /* Photo.h */,
-				F50F443C17D3CF050028EDE7 /* PhotoKind.h */,
-				F50F443D17D3CF050028EDE7 /* PhotoKind.m */,
-				F50F443A17D3CF040028EDE7 /* Photo.m */,
 				F522418C17CFEB4C00FF4062 /* Core Data SPoT.xcdatamodeld */,
+				F54F96DA17D525AE004DA1B4 /* PhotoKind.h */,
+				F54F96DB17D525AE004DA1B4 /* PhotoKind.m */,
+				F54F96DD17D525AF004DA1B4 /* Photo.h */,
+				F54F96DE17D525AF004DA1B4 /* Photo.m */,
 				F52241C117CFF1B500FF4062 /* Photo+Flickr.h */,
 				F52241C217CFF1B500FF4062 /* Photo+Flickr.m */,
 				F52241CB17CFF61900FF4062 /* PhotoKind+Create.h */,
@@ -336,13 +336,13 @@
 				F50F442317D3921D0028EDE7 /* RecentPhotosCDTVC.m in Sources */,
 				F52241CD17CFF61900FF4062 /* PhotoKind+Create.m in Sources */,
 				F50F442617D39D6D0028EDE7 /* DocumentAssistant.m in Sources */,
-				F50F443E17D3CF050028EDE7 /* PhotoKind.m in Sources */,
+				F54F96DC17D525AE004DA1B4 /* PhotoKind.m in Sources */,
 				F522418E17CFEB4C00FF4062 /* Core Data SPoT.xcdatamodeld in Sources */,
 				F527352617D125ED00370A2D /* ImageViewController.m in Sources */,
 				F522416917CFEA6000FF4062 /* SPoTAppDelegate.m in Sources */,
 				F527352917D1260000370A2D /* NSDataCache.m in Sources */,
 				F522416517CFEA6000FF4062 /* main.m in Sources */,
-				F50F443B17D3CF040028EDE7 /* Photo.m in Sources */,
+				F54F96DF17D525AF004DA1B4 /* Photo.m in Sources */,
 				F52241D617CFFFFC00FF4062 /* StanfordCategoriesCDTVC.m in Sources */,
 				F522418B17CFEAC200FF4062 /* CoreDataTableViewController.m in Sources */,
 				F50F442017D391810028EDE7 /* PhotosCDTVC.m in Sources */,

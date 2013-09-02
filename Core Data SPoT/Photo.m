@@ -2,7 +2,7 @@
 //  Photo.m
 //  Core Data SPoT
 //
-//  Created by Teddy Wyly on 9/1/13.
+//  Created by Teddy Wyly on 9/2/13.
 //  Copyright (c) 2013 Teddy Wyly. All rights reserved.
 //
 
@@ -12,15 +12,16 @@
 
 @implementation Photo
 
+@dynamic alphabeticalSection;
 @dynamic dateAccessed;
+@dynamic deleted;
 @dynamic imageURL;
 @dynamic squareImageData;
 @dynamic squareImageURL;
 @dynamic subtitle;
 @dynamic title;
 @dynamic unique;
-@dynamic alphabeticalSection;
-@dynamic deleted;
+@dynamic kindsAsString;
 @dynamic kinds;
 
 @end

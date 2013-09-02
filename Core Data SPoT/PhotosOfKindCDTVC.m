@@ -26,12 +26,19 @@
 {
     if (self.kind.managedObjectContext) {
         
-        // Needs Special Case - User wants to see all photos sorted by PhotoKind
-
+        if ([self.kind.name isEqualToString:@"All"]) {
+            NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Photo"];
+            fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"kindsAsString" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]];
+            fetchRequest.predicate = nil;
+            self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.kind.managedObjectContext sectionNameKeyPath:@"kindsAsString" cacheName:nil];
+                                             
+        } else {
             NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Photo"];
             fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]];
             fetchRequest.predicate = [NSPredicate predicateWithFormat:@"(kinds contains %@)", self.kind];
             self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.kind.managedObjectContext sectionNameKeyPath:@"alphabeticalSection" cacheName:nil];
+        }
+
     } else {
         self.fetchedResultsController = nil;
     }
