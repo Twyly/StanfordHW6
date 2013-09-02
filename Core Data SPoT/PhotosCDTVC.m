@@ -51,14 +51,15 @@
     return cell;
 }
 
-//#pragma mark - UITableViewDelegate
-//
+#pragma mark - UITableViewDelegate
+
 //- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 //{
 //    if (editingStyle == UITableViewCellEditingStyleDelete) {
 //        Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
 //        [photo.managedObjectContext performBlock:^{
 //            photo.deleted = [NSNumber numberWithBool:YES];
+//            [[DocumentAssistant sharedInstance] saveDocument];
 //        }];
 //    }
 //}
