@@ -18,7 +18,7 @@
 - (void)setKind:(PhotoKind *)kind
 {
     _kind = kind;
-    self.title = [kind.name capitalizedString];
+    self.title = [kind.name isEqualToString:ALL_PHOTO_KIND_NAME] ? @"All Photos" : [kind.name capitalizedString];
     [self setupFetchedResultsController];
 }
 
@@ -35,7 +35,7 @@
         } else {
             NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Photo"];
             fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]];
-            fetchRequest.predicate = [NSPredicate predicateWithFormat:@"(kinds contains %@)", self.kind];
+            fetchRequest.predicate = [NSPredicate predicateWithFormat:@"kinds contains %@", self.kind];
             self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.kind.managedObjectContext sectionNameKeyPath:@"alphabeticalSection" cacheName:nil];
         }
 

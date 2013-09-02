@@ -17,6 +17,7 @@
 
 @implementation PhotosCDTVC
 
+#pragma mark - UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -50,11 +51,15 @@
     return cell;
 }
 
+//#pragma mark - UITableViewDelegate
+//
 //- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 //{
 //    if (editingStyle == UITableViewCellEditingStyleDelete) {
 //        Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
-//        photo.deleted = [NSNumber numberWithBool:YES];
+//        [photo.managedObjectContext performBlock:^{
+//            photo.deleted = [NSNumber numberWithBool:YES];
+//        }];
 //    }
 //}
 //
