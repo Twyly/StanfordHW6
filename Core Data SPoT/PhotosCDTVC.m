@@ -55,7 +55,6 @@
 //        Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
 //        photo.deleted = [NSNumber numberWithBool:YES];
 //    }
-//    [self.tableView reloadData];
 //}
 //
 //- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -99,6 +98,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
 }
 
 @end

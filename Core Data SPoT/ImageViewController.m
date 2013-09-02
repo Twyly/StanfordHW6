@@ -1,25 +1,26 @@
 //
-//  imageViewController.m
+//  ImageViewController.m
 //  SPoT
 //
 //  Created by Teddy Wyly on 8/22/13.
 //  Copyright (c) 2013 Teddy Wyly. All rights reserved.
 //
 
-#import "imageViewController.h"
+#import "ImageViewController.h"
 #import "NSDataCache.h"
 
-@interface imageViewController () <UIScrollViewDelegate>
+@interface ImageViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *titleBarButtonItem;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (nonatomic) BOOL startedZooming;
 
 @end
 
-@implementation imageViewController
+@implementation ImageViewController
 
 
 
@@ -31,14 +32,29 @@
 
 - (void)setTitle:(NSString *)title
 {
-    super.title = title;
-    self.titleBarButtonItem.title = title;
+    super.title = [title capitalizedString];
+    self.titleBarButtonItem.title = [title capitalizedString];
 }
 
 - (void)setImageURL:(NSURL *)imageURL
 {
     _imageURL = imageURL;
     [self resetImage];
+}
+
+- (void)setSplitViewBarButtonItem:(UIBarButtonItem *)splitViewBarButtonItem
+{
+    NSMutableArray *toolbarItems = [self.toolbar.items mutableCopy];
+    if (_splitViewBarButtonItem) {
+        if ([toolbarItems containsObject:splitViewBarButtonItem]) {
+            [toolbarItems removeObject:splitViewBarButtonItem];
+            _splitViewBarButtonItem = nil;
+        } else {
+            [toolbarItems insertObject:splitViewBarButtonItem atIndex:0];
+            _splitViewBarButtonItem = splitViewBarButtonItem;
+        }
+    }
+    self.toolbar.items = toolbarItems;
 }
 
 
@@ -166,5 +182,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+
+
 
 @end

@@ -33,7 +33,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Photo" textLabel="mIu-3e-6YB" detailTextLabel="lpX-mS-4hj" style="IBUITableViewCellStyleSubtitle" id="E0E-1I-ctm">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E0E-1I-ctm" id="Fuu-QH-wRR">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -81,7 +81,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PhotoKind" textLabel="eAM-Xq-Zk1" detailTextLabel="2Jf-NI-Anc" style="IBUITableViewCellStyleSubtitle" id="IgP-4t-fQx">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IgP-4t-fQx" id="XH0-xX-hYe">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -143,7 +143,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Photo" textLabel="6lD-Um-po8" detailTextLabel="3Cf-HF-fCH" style="IBUITableViewCellStyleSubtitle" id="vqt-Lu-TdQ">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vqt-Lu-TdQ" id="22a-fX-Csv">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -203,7 +203,7 @@
         <!--Image View Controller-->
         <scene sceneID="RKl-XQ-bdJ">
             <objects>
-                <viewController id="SuG-7N-veX" customClass="imageViewController" sceneMemberID="viewController">
+                <viewController id="SuG-7N-veX" customClass="ImageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dc4-uS-91u"/>
                         <viewControllerLayoutGuide type="bottom" id="UWG-JI-qRK"/>

@@ -33,7 +33,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Photo" textLabel="D4D-VB-0yM" detailTextLabel="d4y-4P-cNM" style="IBUITableViewCellStyleSubtitle" id="gkd-8P-RHT">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gkd-8P-RHT" id="moT-1U-C8t">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -81,7 +81,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PhotoKind" textLabel="0pp-bS-hM9" detailTextLabel="7Zq-kN-hei" style="IBUITableViewCellStyleSubtitle" id="XNS-iz-Unl">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XNS-iz-Unl" id="EtB-xv-Lvf">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -143,7 +143,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Photo" textLabel="fEa-lY-ukp" detailTextLabel="1db-6G-Yx7" style="IBUITableViewCellStyleSubtitle" id="nzE-cu-Xja">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nzE-cu-Xja" id="Ch8-8q-2tp">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -217,7 +217,7 @@
         <!--Image View Controller-->
         <scene sceneID="n7F-cT-Isa">
             <objects>
-                <viewController id="XaX-3l-iH7" customClass="imageViewController" sceneMemberID="viewController">
+                <viewController id="XaX-3l-iH7" customClass="ImageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xrM-Kh-0hc"/>
                         <viewControllerLayoutGuide type="bottom" id="hMm-ne-rAT"/>
@@ -231,18 +231,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6r-B5-w6b">
-                                <rect key="frame" x="0.0" y="-1" width="768" height="1025"/>
+                                <rect key="frame" x="0.0" y="44" width="768" height="980"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9p-Kg-Qe7">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Mi0-OP-HvW"/>
+                                    <barButtonItem title="Item" id="UgU-RS-RBr"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zta-qi-Bpd"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="c6r-B5-w6b" firstAttribute="leading" secondItem="4bu-FM-AMp" secondAttribute="leading" id="CMT-KO-85F"/>
-                            <constraint firstItem="c6r-B5-w6b" firstAttribute="centerX" secondItem="CT8-6u-fmI" secondAttribute="centerX" id="LZj-Xg-by7"/>
+                            <constraint firstItem="c6r-B5-w6b" firstAttribute="centerX" secondItem="CT8-6u-fmI" secondAttribute="centerX" id="5Jp-uj-ojI"/>
+                            <constraint firstItem="c6r-B5-w6b" firstAttribute="top" secondItem="4bu-FM-AMp" secondAttribute="top" constant="44" id="7tM-b4-5LA"/>
+                            <constraint firstItem="c6r-B5-w6b" firstAttribute="leading" secondItem="4bu-FM-AMp" secondAttribute="leading" id="BLF-Kd-6rJ"/>
+                            <constraint firstItem="c6r-B5-w6b" firstAttribute="leading" secondItem="d9p-Kg-Qe7" secondAttribute="leading" id="CdN-wW-PGn"/>
+                            <constraint firstItem="c6r-B5-w6b" firstAttribute="trailing" secondItem="d9p-Kg-Qe7" secondAttribute="trailing" id="IQN-dL-k2Y"/>
+                            <constraint firstItem="c6r-B5-w6b" firstAttribute="top" secondItem="d9p-Kg-Qe7" secondAttribute="bottom" id="RCL-c7-eaM"/>
+                            <constraint firstAttribute="bottom" secondItem="c6r-B5-w6b" secondAttribute="bottom" id="RF6-p3-S26"/>
                             <constraint firstAttribute="centerX" secondItem="CT8-6u-fmI" secondAttribute="centerX" id="ZH6-FN-Z9N"/>
-                            <constraint firstAttribute="bottom" secondItem="c6r-B5-w6b" secondAttribute="bottom" id="kYL-bF-bxa"/>
                             <constraint firstAttribute="centerY" secondItem="CT8-6u-fmI" secondAttribute="centerY" id="o5O-vj-ig8"/>
-                            <constraint firstItem="c6r-B5-w6b" firstAttribute="top" secondItem="4bu-FM-AMp" secondAttribute="top" constant="-1" id="z9S-VW-Pwf"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -250,6 +262,8 @@
                     <connections>
                         <outlet property="scrollView" destination="c6r-B5-w6b" id="dNB-WK-Vro"/>
                         <outlet property="spinner" destination="CT8-6u-fmI" id="w6f-sZ-yhZ"/>
+                        <outlet property="titleBarButtonItem" destination="UgU-RS-RBr" id="2if-61-PER"/>
+                        <outlet property="toolbar" destination="d9p-Kg-Qe7" id="zNL-9o-Uay"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUY-cD-Me5" userLabel="First Responder" sceneMemberID="firstResponder"/>

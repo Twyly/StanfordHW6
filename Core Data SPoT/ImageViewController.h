@@ -1,5 +1,5 @@
 //
-//  imageViewController.h
+//  ImageViewController.h
 //  SPoT
 //
 //  Created by Teddy Wyly on 8/22/13.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface imageViewController : UIViewController
+@interface ImageViewController : UIViewController
 
 @property (strong, nonatomic) NSURL *imageURL;
+@property (strong, nonatomic) UIBarButtonItem *splitViewBarButtonItem;
+
 
 @end

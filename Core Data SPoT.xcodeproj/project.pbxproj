@@ -33,7 +33,7 @@
 		F52241C917CFF2A000FF4062 /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241C717CFF2A000FF4062 /* FlickrFetcher.m */; };
 		F52241CD17CFF61900FF4062 /* PhotoKind+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241CC17CFF61900FF4062 /* PhotoKind+Create.m */; };
 		F52241D617CFFFFC00FF4062 /* StanfordCategoriesCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F52241D517CFFFFC00FF4062 /* StanfordCategoriesCDTVC.m */; };
-		F527352617D125ED00370A2D /* imageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F527352517D125ED00370A2D /* imageViewController.m */; };
+		F527352617D125ED00370A2D /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F527352517D125ED00370A2D /* ImageViewController.m */; };
 		F527352917D1260000370A2D /* NSDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F527352817D1260000370A2D /* NSDataCache.m */; };
 		F542881217D029E000959A7E /* PhotosOfKindCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F542881117D029E000959A7E /* PhotosOfKindCDTVC.m */; };
 /* End PBXBuildFile section */
@@ -90,8 +90,8 @@
 		F52241CC17CFF61900FF4062 /* PhotoKind+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PhotoKind+Create.m"; sourceTree = "<group>"; };
 		F52241D417CFFFFC00FF4062 /* StanfordCategoriesCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StanfordCategoriesCDTVC.h; sourceTree = "<group>"; };
 		F52241D517CFFFFC00FF4062 /* StanfordCategoriesCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StanfordCategoriesCDTVC.m; sourceTree = "<group>"; };
-		F527352417D125ED00370A2D /* imageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageViewController.h; sourceTree = "<group>"; };
-		F527352517D125ED00370A2D /* imageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageViewController.m; sourceTree = "<group>"; };
+		F527352417D125ED00370A2D /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		F527352517D125ED00370A2D /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		F527352717D1260000370A2D /* NSDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataCache.h; sourceTree = "<group>"; };
 		F527352817D1260000370A2D /* NSDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataCache.m; sourceTree = "<group>"; };
 		F542881017D029E000959A7E /* PhotosOfKindCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosOfKindCDTVC.h; sourceTree = "<group>"; };
@@ -178,8 +178,8 @@
 				F542881117D029E000959A7E /* PhotosOfKindCDTVC.m */,
 				F50F442117D3921D0028EDE7 /* RecentPhotosCDTVC.h */,
 				F50F442217D3921D0028EDE7 /* RecentPhotosCDTVC.m */,
-				F527352417D125ED00370A2D /* imageViewController.h */,
-				F527352517D125ED00370A2D /* imageViewController.m */,
+				F527352417D125ED00370A2D /* ImageViewController.h */,
+				F527352517D125ED00370A2D /* ImageViewController.m */,
 				F50F442417D39D6D0028EDE7 /* DocumentAssistant.h */,
 				F50F442517D39D6D0028EDE7 /* DocumentAssistant.m */,
 				F527352717D1260000370A2D /* NSDataCache.h */,
@@ -338,7 +338,7 @@
 				F50F442617D39D6D0028EDE7 /* DocumentAssistant.m in Sources */,
 				F50F443E17D3CF050028EDE7 /* PhotoKind.m in Sources */,
 				F522418E17CFEB4C00FF4062 /* Core Data SPoT.xcdatamodeld in Sources */,
-				F527352617D125ED00370A2D /* imageViewController.m in Sources */,
+				F527352617D125ED00370A2D /* ImageViewController.m in Sources */,
 				F522416917CFEA6000FF4062 /* SPoTAppDelegate.m in Sources */,
 				F527352917D1260000370A2D /* NSDataCache.m in Sources */,
 				F522416517CFEA6000FF4062 /* main.m in Sources */,
