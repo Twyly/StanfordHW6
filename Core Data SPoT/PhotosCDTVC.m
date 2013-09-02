@@ -96,6 +96,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    NSLog(@"View loaded");
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,6 +109,7 @@
 {
     [super awakeFromNib];
     self.splitViewController.delegate = self;
+    NSLog(@"AWAKE FROM NIB");
 }
 
 
@@ -131,7 +133,7 @@
 {
     id detailViewController = [self.splitViewController.viewControllers lastObject];
     if ([detailViewController respondsToSelector:@selector(setSplitViewBarButtonItem:)])
-        [detailViewController performSelector:@selector(setSplitViewBarButtonItem:) withObject:barButtonItem];
+        [detailViewController performSelector:@selector(setSplitViewBarButtonItem:) withObject:nil];
 }
 
 - (id)splitViewDetailWithBarButtonItem

@@ -42,19 +42,35 @@
     [self resetImage];
 }
 
+//- (void)setSplitViewBarButtonItem:(UIBarButtonItem *)splitViewBarButtonItem
+//{
+//    NSMutableArray *toolbarItems = [self.toolbar.items mutableCopy];
+//    if (splitViewBarButtonItem) {
+//        if ([toolbarItems containsObject:splitViewBarButtonItem]) {
+//            [toolbarItems removeObject:splitViewBarButtonItem];
+//            _splitViewBarButtonItem = nil;
+//        } else {
+//            [toolbarItems insertObject:splitViewBarButtonItem atIndex:0];
+//            _splitViewBarButtonItem = splitViewBarButtonItem;
+//        }
+//    }
+//    self.toolbar.items = toolbarItems;
+//}
+
 - (void)setSplitViewBarButtonItem:(UIBarButtonItem *)splitViewBarButtonItem
 {
-    NSMutableArray *toolbarItems = [self.toolbar.items mutableCopy];
-    if (splitViewBarButtonItem) {
-        if ([toolbarItems containsObject:splitViewBarButtonItem]) {
-            [toolbarItems removeObject:splitViewBarButtonItem];
-            _splitViewBarButtonItem = nil;
-        } else {
-            [toolbarItems insertObject:splitViewBarButtonItem atIndex:0];
-            _splitViewBarButtonItem = splitViewBarButtonItem;
-        }
+    if (splitViewBarButtonItem != _splitViewBarButtonItem) {
+        [self handleSplitViewBarButtonItem:splitViewBarButtonItem];
     }
+}
+
+- (void)handleSplitViewBarButtonItem:(UIBarButtonItem *)splitViewBarButtonItem
+{
+    NSMutableArray *toolbarItems = [self.toolbar.items mutableCopy];
+    if (_splitViewBarButtonItem) [toolbarItems removeObject:_splitViewBarButtonItem];
+    if (splitViewBarButtonItem) [toolbarItems insertObject:splitViewBarButtonItem atIndex:0];
     self.toolbar.items = toolbarItems;
+    _splitViewBarButtonItem = splitViewBarButtonItem;
 }
 
 
@@ -168,7 +184,7 @@
     self.scrollView.maximumZoomScale = 5.0;
     self.titleBarButtonItem.title = self.title;
     self.startedZooming = NO;
-    self.splitViewBarButtonItem = self.splitViewBarButtonItem;
+    [self handleSplitViewBarButtonItem:self.splitViewBarButtonItem];
 	
 }
 
